@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCALTEES | Digital & Screenprinting Studio - Makato, PH</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Bold Industrial Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#ffe600',
+                            yellowDark: '#ccb800',
+                            black: '#0d0d0c',
+                            card: '#161614',
+                            border: '#2a2a26',
+                            gray: '#888880'
+                        }
+                    },
+                    fontFamily: {
+                        chakra: ['"Chakra Petch"', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Industrial & Gritty Cyber Aesthetics */
+        body {
+            background-color: #0d0d0c;
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            background-image: 
+                radial-gradient(rgba(255, 230, 0, 0.05) 1px, transparent 0),
+                linear-gradient(to bottom, rgba(13, 13, 12, 0.95), #0d0d0c);
+            background-size: 24px 24px, 100% 100%;
+        }
+
+        .font-header {
+            font-family: 'Chakra Petch', sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* Hazard stripe accent */
+        .hazard-bar {
+            background: repeating-linear-gradient(
+                -45deg,
+                #ffe600,
+                #ffe600 12px,
+                #0d0d0c 12px,
+                #0d0d0c 24px
+            );
+        }
+
+        /* Angled Industrial Cut Corners */
+        .clip-corner {
+            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+        }
+
+        .clip-corner-sm {
+            clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+        }
+
+        .clip-btn {
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0d0c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ffe600;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ccb800;
+        }
+
+        .text-stroke-yellow {
+            -webkit-text-stroke: 1.5px #ffe600;
+            color: transparent;
+        }
+
+        /* Glow effects */
+        .glow-yellow {
+            box-shadow: 0 0 15px rgba(255, 230, 0, 0.25);
+        }
+        .glow-yellow:hover {
+            box-shadow: 0 0 25px rgba(255, 230, 0, 0.45);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-yellow selection:text-black">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="hazard-bar h-2.5 w-full"></div>
+    <div class="bg-brand-black border-b border-brand-border py-1.5 px-4 text-xs font-chakra tracking-wider flex justify-between items-center text-zinc-400">
+        <div class="flex items-center space-x-4">
+            <span><i class="fa-solid font-bold fa-location-dot text-brand-yellow mr-1"></i> MAKATO, PHILIPPINES</span>
+            <span class="hidden sm:inline"><i class="fa-solid fa-bolt text-brand-yellow mr-1"></i> TOP QUALITY &amp; COMPETITIVE PRICING</span>
+        </div>
+        <div class="flex items-center space-x-3 text-xs">
+            <a href="tel:09205017777" class="hover:text-brand-yellow transition"><i class="fa-solid fa-phone text-brand-yellow mr-1"></i> 0920 501 7777</a>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-brand-black/90 backdrop-blur-md border-b-2 border-brand-yellow/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand Header -->
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('home')">
+                    <!-- Stylized Mascot / Logo Emblem -->
+                    <div class="w-12 h-12 rounded-full border-2 border-brand-yellow bg-black flex items-center justify-center p-0.5 shadow-[0_0_10px_rgba(255,230,0,0.3)]">
+                        <!-- Custom SVG Mascot Icon -->
+                        <img src="images/tab-logo.jpg" alt="Localtees Shop Logo" class="w-full h-full object-cover rounded-full" />
+                    </div>
+                    <div>
+                        <span class="font-chakra font-black text-2xl tracking-tighter text-white block leading-none">
+                            LOCAL<span class="text-brand-yellow">TEES</span>
+                        </span>
+                        <span class="text-[9px] font-chakra tracking-widest text-zinc-400 uppercase block mt-0.5">Printing Studio • PH</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-1 font-chakra font-bold text-sm tracking-wider">
+                    <button onclick="switchTab('home')" id="nav-home" class="nav-btn px-4 py-2 border-b-2 border-brand-yellow text-brand-yellow hover:bg-zinc-900 transition uppercase">Home</button>
+                    <button onclick="switchTab('quote')" id="nav-quote" class="nav-btn px-4 py-2 border-b-2 border-transparent text-zinc-300 hover:text-brand-yellow hover:bg-zinc-900 transition uppercase">Quote Estimator</button>
+                    <button onclick="switchTab('gallery')" id="nav-gallery" class="nav-btn px-4 py-2 border-b-2 border-transparent text-zinc-300 hover:text-brand-yellow hover:bg-zinc-900 transition uppercase">Showcase</button>
+                    <button onclick="switchTab('equipment')" id="nav-equipment" class="nav-btn px-4 py-2 border-b-2 border-transparent text-zinc-300 hover:text-brand-yellow hover:bg-zinc-900 transition uppercase">Workshop Gear</button>
+                    <button onclick="switchTab('services')" id="nav-services" class="nav-btn px-4 py-2 border-b-2 border-transparent text-zinc-300 hover:text-brand-yellow hover:bg-zinc-900 transition uppercase">Services</button>
+                    <button onclick="switchTab('about')" id="nav-about" class="nav-btn px-4 py-2 border-b-2 border-transparent text-zinc-300 hover:text-brand-yellow hover:bg-zinc-900 transition uppercase">About Us</button>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden sm:flex items-center space-x-3">
+                    <button onclick="switchTab('quote')" class="clip-btn bg-brand-yellow text-black font-chakra font-bold text-sm px-5 py-2.5 hover:bg-yellow-300 transition duration-200 flex items-center gap-2 shadow-lg">
+                        <i class="fa-solid fa-calculator"></i> GET INSTANT QUOTE
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brand-yellow p-2 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-b border-brand-border px-4 pt-2 pb-6 space-y-2 font-chakra font-bold">
+            <button onclick="switchTab('home')" class="block w-full text-left py-2.5 px-3 rounded hover:bg-zinc-800 text-brand-yellow">HOME</button>
+            <button onclick="switchTab('quote')" class="block w-full text-left py-2.5 px-3 rounded hover:bg-zinc-800 text-zinc-200">QUOTE ESTIMATOR</button>
+            <button onclick="switchTab('gallery')" class="block w-full text-left py-2.5 px-3 rounded hover:bg-zinc-800 text-zinc-200">SHOWCASE GALLERY</button>
+            <button onclick="switchTab('equipment')" class="block w-full text-left py-2.5 px-3 rounded hover:bg-zinc-800 text-zinc-200">WORKSHOP GEAR</button>
+            <button onclick="switchTab('services')" class="block w-full text-left py-2.5 px-3 rounded hover:bg-zinc-800 text-zinc-200">OUR SERVICES</button>
+            <button onclick="switchTab('about')" class="block w-full text-left py-2.5 px-3 rounded hover:bg-zinc-800 text-zinc-200">ABOUT THE PRINTER</button>
+            <div class="pt-2">
+                <button onclick="switchTab('quote')" class="w-full clip-btn bg-brand-yellow text-black py-3 font-bold uppercase text-center">Get Instant Quote</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER FOR TAB VIEWS -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- ================= PAGE 1: HOME LANDING PAGE ================= -->
+        <div id="tab-home" class="tab-content space-y-16">
+            
+            <!-- HERO SECTION -->
+            <section class="relative bg-brand-card border-2 border-brand-border clip-corner p-6 md:p-12 overflow-hidden shadow-2xl">
+                <!-- Background decorative industrial stencil graphics -->
+                <div class="absolute right-0 top-0 opacity-10 pointer-events-none text-[180px] font-chakra font-black text-white leading-none select-none">
+                    LT PRINT
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center gap-2 bg-zinc-900 border border-brand-yellow/40 px-3 py-1 rounded text-xs font-chakra text-brand-yellow">
+                            <span class="w-2 h-2 rounded-full bg-brand-yellow animate-ping"></span>
+                            STUDIO OPERATIONAL IN MAKATO, AKLAN
+                        </div>
+                        
+                        <h1 class="font-chakra text-4xl sm:text-6xl font-black tracking-tight leading-none text-white">
+                            HEAVYWEIGHT <br>
+                            <span class="text-brand-yellow">STREETWEAR</span> &amp; PRINTING
+                        </h1>
+
+                        <p class="text-zinc-300 text-base sm:text-lg max-w-xl leading-relaxed">
+                            Engineered for high-durability apparel, custom merch drops, teamwear, and screenprinted goods. Premium inks, sharp vector precision, and competitive pricing.
+                        </p>
+
+                        <!-- Quick Action CTAs -->
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <button onclick="switchTab('quote')" class="clip-btn bg-brand-yellow text-black font-chakra font-bold text-lg px-8 py-4 hover:bg-yellow-300 transition duration-200 flex items-center gap-3 glow-yellow">
+                                <i class="fa-solid fa-shirt"></i> CUSTOM QUOTE BUILDER
+                            </button>
+                            <button onclick="switchTab('gallery')" class="clip-btn bg-zinc-900 border-2 border-brand-border text-white font-chakra font-bold text-lg px-6 py-4 hover:border-brand-yellow hover:text-brand-yellow transition duration-200">
+                                EXPLORE SHOWCASE
+                            </button>
+                        </div>
+
+                        <!-- Stats Strip -->
+                        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-brand-border/60">
+                            <div>
+                                <p class="font-chakra font-black text-2xl text-brand-yellow">1.4K+</p>
+                                <p class="text-xs text-zinc-400 font-medium uppercase">Community Followers</p>
+                            </div>
+                            <div>
+                                <p class="font-chakra font-black text-2xl text-white">100%</p>
+                                <p class="text-xs text-zinc-400 font-medium uppercase">Quality Inspected</p>
+                            </div>
+                            <div>
+                                <p class="font-chakra font-black text-2xl text-brand-yellow">FAST</p>
+                                <p class="text-xs text-zinc-400 font-medium uppercase">Turnaround Time</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual Branding Card -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-sm bg-black border-2 border-brand-yellow clip-corner p-6 text-center space-y-4 shadow-[0_0_20px_rgba(255,230,0,0.15)]">
+                            <div class="w-32 h-32 mx-auto rounded-full bg-zinc-900 border-4 border-brand-yellow flex items-center justify-center p-2 shadow-inner">
+                                <img src="images/local-tees-logo.jpg" alt="Localtees Mascot Logo" class="rounded-full w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h3 class="font-chakra font-black text-2xl text-white">LOCALTEES STUDIO</h3>
+                                <p class="text-xs font-chakra text-brand-yellow tracking-widest uppercase">Digital &amp; Screenprinting Services</p>
+                            </div>
+                            <p class="text-xs text-zinc-400 italic">
+                                "To make sure of top quality &amp; competitive pricing."
+                            </p>
+                            
+                            <!-- Instant Social Connect Buttons -->
+                            <div class="pt-2 flex justify-center gap-3">
+                                <a href="https://m.me/Localtees" target="_blank" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-chakra font-bold py-2 text-xs rounded flex items-center justify-center gap-2 transition">
+                                    <i class="fa-brands fa-facebook-messenger text-sm"></i> MESSENGER
+                                </a>
+                                <a href="mailto:fher_factor@rocketmail.com" class="flex-1 bg-zinc-800 hover:bg-zinc-700 text-white font-chakra font-bold py-2 text-xs rounded flex items-center justify-center gap-2 transition border border-zinc-600">
+                                    <i class="fa-solid fa-envelope text-sm"></i> EMAIL US
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRINT SERVICES QUICK HIGHLIGHTS -->
+            <section class="space-y-6">
+                <div class="flex items-center justify-between border-b border-brand-border pb-4">
+                    <div>
+                        <h2 class="font-chakra text-3xl font-black text-white">PRINT CAPABILITIES</h2>
+                        <p class="text-sm text-zinc-400">High-performance garment decoration techniques.</p>
+                    </div>
+                    <button onclick="switchTab('services')" class="text-brand-yellow font-chakra font-bold text-sm hover:underline flex items-center gap-1">
+                        ALL SERVICES <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Service 1 -->
+                    <div class="bg-brand-card border border-brand-border hover:border-brand-yellow p-6 clip-corner-sm transition duration-300 space-y-3 group">
+                        <div class="w-12 h-12 bg-zinc-900 text-brand-yellow flex items-center justify-center text-2xl group-hover:bg-brand-yellow group-hover:text-black transition">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h3 class="font-chakra font-bold text-xl text-white">SCREENPRINTING</h3>
+                        <p class="text-xs text-zinc-400">High-volume bulk orders using rich Plastisol &amp; water-based inks for vibrant longevity.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-brand-card border border-brand-border hover:border-brand-yellow p-6 clip-corner-sm transition duration-300 space-y-3 group">
+                        <div class="w-12 h-12 bg-zinc-900 text-brand-yellow flex items-center justify-center text-2xl group-hover:bg-brand-yellow group-hover:text-black transition">
+                            <i class="fa-solid fa-print"></i>
+                        </div>
+                        <h3 class="font-chakra font-bold text-xl text-white">DIGITAL DTF</h3>
+                        <p class="text-xs text-zinc-400">Direct-to-Film transfer printing with ultra-sharp details and unlimited color gradients.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-brand-card border border-brand-border hover:border-brand-yellow p-6 clip-corner-sm transition duration-300 space-y-3 group">
+                        <div class="w-12 h-12 bg-zinc-900 text-brand-yellow flex items-center justify-center text-2xl group-hover:bg-brand-yellow group-hover:text-black transition">
+                            <i class="fa-solid fa-fire-flame-curved"></i>
+                        </div>
+                        <h3 class="font-chakra font-bold text-xl text-white">SUBLIMATION</h3>
+                        <p class="text-xs text-zinc-400">All-over full bleed custom sports jerseys, activewear, and performance fabrics.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-brand-card border border-brand-border hover:border-brand-yellow p-6 clip-corner-sm transition duration-300 space-y-3 group">
+                        <div class="w-12 h-12 bg-zinc-900 text-brand-yellow flex items-center justify-center text-2xl group-hover:bg-brand-yellow group-hover:text-black transition">
+                            <i class="fa-solid fa-tag"></i>
+                        </div>
+                        <h3 class="font-chakra font-bold text-xl text-white">CUSTOM BRANDING</h3>
+                        <p class="text-xs text-zinc-400">Inner neck tag prints, hem tags, and custom packaging solutions for clothing lines.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CALLOUT BANNER -->
+            <section class="bg-zinc-900 border-2 border-brand-yellow p-8 clip-corner flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 text-center md:text-left">
+                    <h3 class="font-chakra text-2xl font-black text-white">READY TO LAUNCH YOUR APPAREL BRAND OR ORDER CLUB TEES?</h3>
+                    <p class="text-sm text-zinc-400">Use our instant quote builder to estimate costs and send design files directly.</p>
+                </div>
+                <button onclick="switchTab('quote')" class="clip-btn bg-brand-yellow text-black font-chakra font-bold px-8 py-3.5 hover:bg-yellow-300 transition whitespace-nowrap">
+                    BUILD YOUR QUOTE NOW
+                </button>
+            </section>
+        </div>
+
+
+        <!-- ================= PAGE 2: CUSTOM SHIRT QUOTE FORM ================= -->
+        <div id="tab-quote" class="tab-content hidden space-y-8">
+            <div class="border-b border-brand-border pb-4">
+                <h1 class="font-chakra text-3xl sm:text-4xl font-black text-white">INTERACTIVE QUOTE ESTIMATOR</h1>
+                <p class="text-zinc-400 text-sm">Select garment specifications, quantity, and print placements to calculate instant estimate.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- FORM INPUTS COLUMN -->
+                <div class="lg:col-span-8 bg-brand-card border border-brand-border p-6 clip-corner space-y-6">
+                    
+                    <!-- 1. Select Garment Type -->
+                    <div class="space-y-3">
+                        <label class="font-chakra font-bold text-sm text-brand-yellow block tracking-wide">1. GARMENT TYPE</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <button type="button" onclick="selectGarment('tshirt', 180, this)" class="garment-btn border-2 border-brand-yellow bg-zinc-900 p-3 text-center text-xs font-chakra font-bold rounded text-white flex flex-col items-center gap-2">
+                                <i class="fa-solid fa-shirt text-2xl text-brand-yellow"></i>
+                                <span>STANDARD TEE</span>
+                                <span class="text-[10px] text-zinc-400">Base: ₱180</span>
+                            </button>
+                            <button type="button" onclick="selectGarment('oversized', 260, this)" class="garment-btn border border-brand-border bg-zinc-900 p-3 text-center text-xs font-chakra font-bold rounded text-white flex flex-col items-center gap-2 hover:border-zinc-500">
+                                <i class="fa-solid fa-user-ninja text-2xl text-brand-yellow"></i>
+                                <span>OVERSIZED TEE</span>
+                                <span class="text-[10px] text-zinc-400">Base: ₱260</span>
+                            </button>
+                            <button type="button" onclick="selectGarment('hoodie', 450, this)" class="garment-btn border border-brand-border bg-zinc-900 p-3 text-center text-xs font-chakra font-bold rounded text-white flex flex-col items-center gap-2 hover:border-zinc-500">
+                                <i class="fa-solid fa-vest text-2xl text-brand-yellow"></i>
+                                <span>HEAVY HOODIE</span>
+                                <span class="text-[10px] text-zinc-400">Base: ₱450</span>
+                            </button>
+                            <button type="button" onclick="selectGarment('jersey', 320, this)" class="garment-btn border border-brand-border bg-zinc-900 p-3 text-center text-xs font-chakra font-bold rounded text-white flex flex-col items-center gap-2 hover:border-zinc-500">
+                                <i class="fa-solid fa-running text-2xl text-brand-yellow"></i>
+                                <span>SUB JERSEY</span>
+                                <span class="text-[10px] text-zinc-400">Base: ₱320</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 2. Garment Color & Printing Technique -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="font-chakra font-bold text-sm text-brand-yellow block tracking-wide">2. GARMENT COLOR</label>
+                            <select id="shirt-color" class="w-full bg-zinc-900 border border-brand-border text-white text-sm font-chakra p-3 rounded focus:border-brand-yellow focus:outline-none">
+                                <option value="Black">Stealth Black</option>
+                                <option value="White">Pure White</option>
+                                <option value="Heather Gray">Heather Gray</option>
+                                <option value="Navy Blue">Navy Blue</option>
+                                <option value="Custom Dye">Custom Dye Color</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="font-chakra font-bold text-sm text-brand-yellow block tracking-wide">3. PRINT METHOD</label>
+                            <select id="print-method" onchange="calculateTotal()" class="w-full bg-zinc-900 border border-brand-border text-white text-sm font-chakra p-3 rounded focus:border-brand-yellow focus:outline-none">
+                                <option value="Screenprinting">Screenprinting (Best for Bulk)</option>
+                                <option value="Digital DTF">Digital DTF (Full Color Detail)</option>
+                                <option value="Sublimation">Full Sublimation (Polyester)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 3. Quantity & Print Positions -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <label class="font-chakra font-bold text-sm text-brand-yellow block tracking-wide">4. QUANTITY</label>
+                                <span id="discount-badge" class="text-[10px] font-chakra bg-emerald-950 text-emerald-400 border border-emerald-700 px-2 py-0.5 rounded">NO DISCOUNT</span>
+                            </div>
+                            <input type="number" id="order-qty" value="25" min="1" max="1000" oninput="calculateTotal()" class="w-full bg-zinc-900 border border-brand-border text-white text-lg font-chakra font-bold p-3 rounded focus:border-brand-yellow focus:outline-none">
+                            <p class="text-[11px] text-zinc-400">Volume Discounts: 15-50 pcs (10% off), 51-100 pcs (20% off), 101+ pcs (30% off)</p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="font-chakra font-bold text-sm text-brand-yellow block tracking-wide">5. PRINT LOCATIONS</label>
+                            <div class="grid grid-cols-2 gap-2 text-xs font-chakra">
+                                <label class="flex items-center space-x-2 bg-zinc-900 p-2.5 rounded border border-brand-border cursor-pointer">
+                                    <input type="checkbox" id="loc-front" checked onchange="calculateTotal()" class="accent-brand-yellow">
+                                    <span>Front Center</span>
+                                </label>
+                                <label class="flex items-center space-x-2 bg-zinc-900 p-2.5 rounded border border-brand-border cursor-pointer">
+                                    <input type="checkbox" id="loc-back" onchange="calculateTotal()" class="accent-brand-yellow">
+                                    <span>Back Full</span>
+                                </label>
+                                <label class="flex items-center space-x-2 bg-zinc-900 p-2.5 rounded border border-brand-border cursor-pointer">
+                                    <input type="checkbox" id="loc-chest" onchange="calculateTotal()" class="accent-brand-yellow">
+                                    <span>Left Chest</span>
+                                </label>
+                                <label class="flex items-center space-x-2 bg-zinc-900 p-2.5 rounded border border-brand-border cursor-pointer">
+                                    <input type="checkbox" id="loc-sleeve" onchange="calculateTotal()" class="accent-brand-yellow">
+                                    <span>Sleeve Print</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Drag & Drop Artwork Simulator -->
+                    <div class="space-y-2">
+                        <label class="font-chakra font-bold text-sm text-brand-yellow block tracking-wide">6. ATTACH YOUR DESIGN / MOCKUP (OPTIONAL)</label>
+                        <div id="drop-zone" class="border-2 border-dashed border-zinc-700 hover:border-brand-yellow p-6 rounded text-center bg-zinc-900/50 cursor-pointer transition">
+                            <i class="fa-solid fa-cloud-arrow-up text-3xl text-zinc-500 mb-2"></i>
+                            <p class="text-sm font-chakra text-zinc-300">Drag &amp; drop design files here, or <span class="text-brand-yellow">browse</span></p>
+                            <p class="text-xs text-zinc-500 mt-1">PNG, PSD, AI, Vector PDF (Max 25MB)</p>
+                            <input type="file" id="file-input" class="hidden" onchange="handleFileSelect(this)">
+                            <p id="file-name" class="text-xs text-brand-yellow mt-2 font-mono font-bold"></p>
+                        </div>
+                    </div>
+
+                    <!-- Client Notes -->
+                    <div class="space-y-2">
+                        <label class="font-chakra font-bold text-sm text-brand-yellow block tracking-wide">7. ADDITIONAL INSTRUCTIONS</label>
+                        <textarea id="quote-notes" rows="2" placeholder="Specific deadline, ink preference (e.g. Plastisol or Discharge), size breakdown..." class="w-full bg-zinc-900 border border-brand-border text-white text-xs font-sans p-3 rounded focus:border-brand-yellow focus:outline-none"></textarea>
+                    </div>
+
+                </div>
+
+                <!-- ESTIMATE SUMMARY SIDEBAR -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="bg-brand-card border-2 border-brand-yellow p-6 clip-corner sticky top-28 space-y-6">
+                        <div class="border-b border-brand-border pb-3">
+                            <span class="text-xs font-chakra tracking-widest text-brand-yellow uppercase">LIVE ESTIMATE</span>
+                            <h3 class="font-chakra text-2xl font-black text-white">ORDER SUMMARY</h3>
+                        </div>
+
+                        <div class="space-y-3 text-xs font-chakra">
+                            <div class="flex justify-between py-1 border-b border-zinc-800">
+                                <span class="text-zinc-400">Garment Base:</span>
+                                <span id="summary-garment" class="font-bold text-white">Standard Tee</span>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-zinc-800">
+                                <span class="text-zinc-400">Selected Method:</span>
+                                <span id="summary-method" class="font-bold text-white">Screenprinting</span>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-zinc-800">
+                                <span class="text-zinc-400">Print Positions:</span>
+                                <span id="summary-positions" class="font-bold text-white">1 Location</span>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-zinc-800">
+                                <span class="text-zinc-400">Unit Price Estimate:</span>
+                                <span id="summary-unit" class="font-bold text-brand-yellow">₱230.00 / pc</span>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-zinc-800">
+                                <span class="text-zinc-400">Total Pieces:</span>
+                                <span id="summary-qty" class="font-bold text-white">25 pcs</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-zinc-900 p-4 rounded border border-brand-border text-center space-y-1">
+                            <span class="text-[11px] font-chakra text-zinc-400 uppercase">Estimated Total Cost</span>
+                            <div id="summary-total" class="font-chakra font-black text-4xl text-brand-yellow">₱5,175.00</div>
+                            <p class="text-[10px] text-zinc-500">*Final pricing confirmed upon artwork review.</p>
+                        </div>
+
+                        <!-- Direct Send Quote Buttons -->
+                        <div class="space-y-3 pt-2">
+                            <button onclick="sendQuoteMessenger()" class="w-full clip-btn bg-blue-600 hover:bg-blue-500 text-white font-chakra font-bold py-3 text-sm flex items-center justify-center gap-2 transition">
+                                <i class="fa-brands fa-facebook-messenger text-base"></i> SEND QUOTE VIA MESSENGER
+                            </button>
+                            <button onclick="sendQuoteEmail()" class="w-full clip-btn bg-brand-yellow text-black font-chakra font-bold py-3 text-sm flex items-center justify-center gap-2 hover:bg-yellow-300 transition">
+                                <i class="fa-solid fa-paper-plane text-base"></i> SUBMIT QUOTE VIA EMAIL
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ================= PAGE 3: GALLERY / SHOWCASE ================= -->
+        <div id="tab-gallery" class="tab-content hidden space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-brand-border pb-4 gap-4">
+                <div>
+                    <h1 class="font-chakra text-3xl sm:text-4xl font-black text-white">FINISHED PRINTS SHOWCASE</h1>
+                    <p class="text-zinc-400 text-sm">Real productions, custom streetwear drops, and client merch created in Makato studio.</p>
+                </div>
+                
+                <!-- Gallery Filter Tabs -->
+                <div class="flex flex-wrap gap-2 font-chakra font-bold text-xs">
+                    <button onclick="filterGallery('all', this)" class="gallery-filter-btn px-4 py-2 bg-brand-yellow text-black rounded">ALL</button>
+                    <button onclick="filterGallery('screenprint', this)" class="gallery-filter-btn px-4 py-2 bg-zinc-900 text-zinc-300 hover:text-brand-yellow rounded">SCREENPRINT</button>
+                    <button onclick="filterGallery('dtf', this)" class="gallery-filter-btn px-4 py-2 bg-zinc-900 text-zinc-300 hover:text-brand-yellow rounded">DIGITAL DTF</button>
+                    <button onclick="filterGallery('streetwear', this)" class="gallery-filter-btn px-4 py-2 bg-zinc-900 text-zinc-300 hover:text-brand-yellow rounded">STREETWEAR DROPS</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                
+                <!-- Item 1 -->
+                <div class="gallery-item screenprint streetwear bg-brand-card border border-brand-border clip-corner group overflow-hidden">
+                    <div class="relative h-72 bg-zinc-900 overflow-hidden cursor-pointer" onclick="openLightbox('https://placehold.co/800x800/161614/ffe600?text=HEAVYWEIGHT+CYBER+TEE', 'Cyber Heavyweight Tee - Plastisol Print')">
+                        <img src="https://placehold.co/600x600/161614/ffe600?text=CYBER+TEE" alt="Cyber Tee" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="bg-brand-yellow text-black font-chakra font-bold px-4 py-2 text-xs clip-btn">VIEW PRINT DETAIL</span>
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <span class="text-[10px] font-chakra text-brand-yellow uppercase tracking-wider">Screenprint • 240GSM Cotton</span>
+                        <h3 class="font-chakra font-bold text-lg text-white">CYBERPUNK GRAPHIC TEE</h3>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item dtf streetwear bg-brand-card border border-brand-border clip-corner group overflow-hidden">
+                    <div class="relative h-72 bg-zinc-900 overflow-hidden cursor-pointer" onclick="openLightbox('https://placehold.co/800x800/161614/ffffff?text=FULL+COLOR+DTF+HOODIE', 'Heavyweight Oversized Hoodie')">
+                        <img src="https://placehold.co/600x600/161614/ffffff?text=DTF+HOODIE" alt="DTF Hoodie" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="bg-brand-yellow text-black font-chakra font-bold px-4 py-2 text-xs clip-btn">VIEW PRINT DETAIL</span>
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <span class="text-[10px] font-chakra text-brand-yellow uppercase tracking-wider">Digital DTF • Heavy Fleece</span>
+                        <h3 class="font-chakra font-bold text-lg text-white">URBAN STREETWEAR HOODIE</h3>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item screenprint bg-brand-card border border-brand-border clip-corner group overflow-hidden">
+                    <div class="relative h-72 bg-zinc-900 overflow-hidden cursor-pointer" onclick="openLightbox('https://placehold.co/800x800/161614/ffe600?text=MOTORCYCLE+CLUB+MERCH', 'Multi-color Screenprinted Back Logo')">
+                        <img src="https://placehold.co/600x600/161614/ffe600?text=CLUB+MERCH" alt="Club Merch" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="bg-brand-yellow text-black font-chakra font-bold px-4 py-2 text-xs clip-btn">VIEW PRINT DETAIL</span>
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <span class="text-[10px] font-chakra text-brand-yellow uppercase tracking-wider">Screenprint • Plastisol Ink</span>
+                        <h3 class="font-chakra font-bold text-lg text-white">RIDER CLUB MERCH DROP</h3>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item dtf bg-brand-card border border-brand-border clip-corner group overflow-hidden">
+                    <div class="relative h-72 bg-zinc-900 overflow-hidden cursor-pointer" onclick="openLightbox('https://placehold.co/800x800/161614/38bdf8?text=SPORTS+TEAM+JERSEY', 'Sublimation Team Jersey')">
+                        <img src="https://placehold.co/600x600/161614/38bdf8?text=TEAM+JERSEY" alt="Team Jersey" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="bg-brand-yellow text-black font-chakra font-bold px-4 py-2 text-xs clip-btn">VIEW PRINT DETAIL</span>
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <span class="text-[10px] font-chakra text-brand-yellow uppercase tracking-wider">Sublimation • Dri-Fit</span>
+                        <h3 class="font-chakra font-bold text-lg text-white">CUSTOM ATHLETIC UNIFORMS</h3>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item streetwear screenprint bg-brand-card border border-brand-border clip-corner group overflow-hidden">
+                    <div class="relative h-72 bg-zinc-900 overflow-hidden cursor-pointer" onclick="openLightbox('https://placehold.co/800x800/161614/ffe600?text=PUFF+INK+SPECIALITY', 'Raised Puff Ink Print')">
+                        <img src="https://placehold.co/600x600/161614/ffe600?text=PUFF+INK+PRINT" alt="Puff Print" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="bg-brand-yellow text-black font-chakra font-bold px-4 py-2 text-xs clip-btn">VIEW PRINT DETAIL</span>
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <span class="text-[10px] font-chakra text-brand-yellow uppercase tracking-wider">Specialty Puff Ink • 220GSM</span>
+                        <h3 class="font-chakra font-bold text-lg text-white">3D PUFF INK TEXTURE</h3>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item dtf bg-brand-card border border-brand-border clip-corner group overflow-hidden">
+                    <div class="relative h-72 bg-zinc-900 overflow-hidden cursor-pointer" onclick="openLightbox('https://placehold.co/800x800/161614/f43f5e?text=BRAND+NECK+LABELS', 'Custom Inner Branding')">
+                        <img src="https://placehold.co/600x600/161614/f43f5e?text=NECK+LABELS" alt="Neck Labels" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="bg-brand-yellow text-black font-chakra font-bold px-4 py-2 text-xs clip-btn">VIEW PRINT DETAIL</span>
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <span class="text-[10px] font-chakra text-brand-yellow uppercase tracking-wider">Custom Neck Tag • Relabeling</span>
+                        <h3 class="font-chakra font-bold text-lg text-white">PRIVATE LABEL BRANDING</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ================= PAGE 4: WORKSHOP GEAR & EQUIPMENT ================= -->
+        <div id="tab-equipment" class="tab-content hidden space-y-12">
+            <div class="border-b border-brand-border pb-4 flex flex-col md:flex-row justify-between md:items-end gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-zinc-900 border border-brand-yellow/40 px-3 py-1 rounded text-xs font-chakra text-brand-yellow mb-2">
+                        <i class="fa-solid fa-gears"></i> HEAVY INDUSTRIAL HARDWARE SETUP
+                    </div>
+                    <h1 class="font-chakra text-3xl sm:text-4xl font-black text-white">WORKSHOP &amp; PRODUCTION GEAR</h1>
+                    <p class="text-zinc-400 text-sm">Industrial line equipment engineered for precision registration, heavy flash curing, and streetwear durability.</p>
+                </div>
+                <button onclick="switchTab('quote')" class="clip-btn bg-brand-yellow text-black font-chakra font-bold text-xs px-5 py-3 hover:bg-yellow-300 transition uppercase whitespace-nowrap">
+                    <i class="fa-solid fa-calculator mr-1"></i> TEST YOUR DESIGN SPECS
+                </button>
+            </div>
+
+            <!-- Equipment Cards Grid with Integrated Visual Mockups -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Equipment 1: Thai Line Table -->
+                <div class="bg-brand-card border-2 border-brand-border hover:border-brand-yellow clip-corner p-6 transition duration-300 space-y-5 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-brand-border pb-3">
+                            <span class="text-[10px] font-chakra text-brand-yellow tracking-widest uppercase bg-zinc-900 border border-brand-yellow/30 px-2 py-0.5 rounded">GEAR SPEC // 01</span>
+                            <span class="text-xs font-chakra text-emerald-400 font-bold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> OPERATIONAL</span>
+                        </div>
+                        
+                        <!-- Visual Image Card / Graphic Showcase -->
+                        <div class="relative h-64 w-full bg-zinc-900 border border-brand-border rounded overflow-hidden">
+                            <span class="absolute top-3 right-3 bg-brand-yellow text-black text-[10px] font-chakra font-bold px-2 py-0.5 rounded z-10">PRECISION RAIL</span>
+                            <img src="images/line-table.jpg" alt="Thai Line Table Setup" class="w-full h-full object-cover" />
+                        </div>                       
+
+                        <div>
+                            <h3 class="font-chakra font-black text-2xl text-white">THAI LINE TABLE SETUP</h3>
+                            <p class="text-xs font-chakra text-zinc-400 mt-1">Manual High-Precision Screen Printing Setup</p>
+                        </div>
+
+                        <p class="text-xs text-zinc-300 leading-relaxed">
+                            Built specifically for high-volume manual production runs and seam-to-seam print layouts. Utilizes pin-rail micro-registration so multi-color prints stay pixel-sharp across 100+ shirts.
+                        </p>
+
+                        <!-- Tech Specs List -->
+                        <div class="bg-zinc-900/80 p-3 rounded border border-brand-border/60 space-y-2 text-[11px] font-chakra">
+                            <div class="flex justify-between border-b border-zinc-800 pb-1">
+                                <span class="text-zinc-400">Max Print Size:</span>
+                                <span class="font-bold text-white">16" x 22" (Oversized Streetwear)</span>
+                            </div>
+                            <div class="flex justify-between border-b border-zinc-800 pb-1">
+                                <span class="text-zinc-400">Registration System:</span>
+                                <span class="font-bold text-brand-yellow">Micro-Pin Rail Alignment</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-zinc-400">Compatible Inks:</span>
+                                <span class="font-bold text-white">Plastisol, Discharge, Water-based</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 border-t border-brand-border/60">
+                        <span class="text-[10px] font-chakra text-zinc-400 block uppercase mb-1">Primary Applications</span>
+                        <div class="flex flex-wrap gap-1 text-[10px] font-chakra">
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">Oversized Graphics</span>
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">Bulk Merch Drops</span>
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">Soft-Hand Prints</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Equipment 2: Heavy-Duty Industrial Heat Press -->
+                <div class="bg-brand-card border-2 border-brand-border hover:border-brand-yellow clip-corner p-6 transition duration-300 space-y-5 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-brand-border pb-3">
+                            <span class="text-[10px] font-chakra text-brand-yellow tracking-widest uppercase bg-zinc-900 border border-brand-yellow/30 px-2 py-0.5 rounded">GEAR SPEC // 02</span>
+                            <span class="text-xs font-chakra text-emerald-400 font-bold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> OPERATIONAL</span>
+                        </div>
+
+                        <!-- Visual Image Card / Graphic Showcase -->
+                        <div class="relative h-64 w-full bg-zinc-900 border border-brand-border rounded overflow-hidden">
+                            <span class="absolute top-3 right-3 bg-brand-yellow text-black text-[10px] font-chakra font-bold px-2 py-0.5 rounded z-10">PID HEAT CURE</span>
+                            <img src="images/heat-press.jpg" alt="Heavy-Duty Heat Press" class="w-full h-full object-cover" />
+                        </div>
+
+                        <div>
+                            <h3 class="font-chakra font-black text-2xl text-white">HEAVY-DUTY HEAT PRESS</h3>
+                            <p class="text-xs font-chakra text-zinc-400 mt-1">High-Pressure Thermal Bonding &amp; Curing Unit</p>
+                        </div>
+
+                        <p class="text-xs text-zinc-300 leading-relaxed">
+                            Industrial pneumatic-grade press providing uniform heat and heavy pressure. Used for smooth ink post-curing, DTF film transfers, vinyl adhesion, and custom neck labels.
+                        </p>
+
+                        <!-- Tech Specs List -->
+                        <div class="bg-zinc-900/80 p-3 rounded border border-brand-border/60 space-y-2 text-[11px] font-chakra">
+                            <div class="flex justify-between border-b border-zinc-800 pb-1">
+                                <span class="text-zinc-400">Platen Size:</span>
+                                <span class="font-bold text-white">16" x 20" Auto-Open</span>
+                            </div>
+                            <div class="flex justify-between border-b border-zinc-800 pb-1">
+                                <span class="text-zinc-400">Temp Control:</span>
+                                <span class="font-bold text-brand-yellow">Digital PID (±1°C Accuracy)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-zinc-400">Pressure Rating:</span>
+                                <span class="font-bold text-white">High-Pressure Pneumatic Lock</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 border-t border-brand-border/60">
+                        <span class="text-[10px] font-chakra text-zinc-400 block uppercase mb-1">Primary Applications</span>
+                        <div class="flex flex-wrap gap-1 text-[10px] font-chakra">
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">DTF Transfers</span>
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">Ink Post-Curing</span>
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">Neck Labels</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Equipment 3: Precision Rotary Screen Press -->
+                <div class="bg-brand-card border-2 border-brand-border hover:border-brand-yellow clip-corner p-6 transition duration-300 space-y-5 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-brand-border pb-3">
+                            <span class="text-[10px] font-chakra text-brand-yellow tracking-widest uppercase bg-zinc-900 border border-brand-yellow/30 px-2 py-0.5 rounded">GEAR SPEC // 03</span>
+                            <span class="text-xs font-chakra text-emerald-400 font-bold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> OPERATIONAL</span>
+                        </div>
+
+                        <!-- Visual Image Card / Graphic Showcase -->
+                        <div class="relative h-64 w-full bg-zinc-900 border border-brand-border rounded overflow-hidden">
+                            <span class="absolute top-3 right-3 bg-brand-yellow text-black text-[10px] font-chakra font-bold px-2 py-0.5 rounded z-10">ROTARY CAROUSEL</span>
+                            <img src="images/rotary.jpg" alt="Rotary Screen Press" class="w-full h-full object-cover" />
+                        </div>
+
+                        <div>
+                            <h3 class="font-chakra font-black text-2xl text-white">ROTARY SCREEN PRESS</h3>
+                            <p class="text-xs font-chakra text-zinc-400 mt-1">Multi-Station Carousel Screen Printing Carousel</p>
+                        </div>
+
+                        <p class="text-xs text-zinc-300 leading-relaxed">
+                            Multi-color station press built for tight color separations, halftone vector prints, and fast turnaround multi-layer screen printed artwork.
+                        </p>
+
+                        <!-- Tech Specs List -->
+                        <div class="bg-zinc-900/80 p-3 rounded border border-brand-border/60 space-y-2 text-[11px] font-chakra">
+                            <div class="flex justify-between border-b border-zinc-800 pb-1">
+                                <span class="text-zinc-400">Color Stations:</span>
+                                <span class="font-bold text-white">4-Color / 4-Station Carousel</span>
+                            </div>
+                            <div class="flex justify-between border-b border-zinc-800 pb-1">
+                                <span class="text-zinc-400">Registration:</span>
+                                <span class="font-bold text-brand-yellow">Tapered Roller Micro-Clamps</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-zinc-400">Artwork Type:</span>
+                                <span class="font-bold text-white">Spot Color &amp; Halftones</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 border-t border-brand-border/60">
+                        <span class="text-[10px] font-chakra text-zinc-400 block uppercase mb-1">Primary Applications</span>
+                        <div class="flex flex-wrap gap-1 text-[10px] font-chakra">
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">Multi-Color Vectors</span>
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">Rider Club Merch</span>
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">Uniform Batches</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Equipment 4: Infrared Flash Dryer -->
+                <div class="bg-brand-card border-2 border-brand-border hover:border-brand-yellow clip-corner p-6 transition duration-300 space-y-5 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-brand-border pb-3">
+                            <span class="text-[10px] font-chakra text-brand-yellow tracking-widest uppercase bg-zinc-900 border border-brand-yellow/30 px-2 py-0.5 rounded">GEAR SPEC // 04</span>
+                            <span class="text-xs font-chakra text-emerald-400 font-bold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> OPERATIONAL</span>
+                        </div>
+
+                        <!-- Visual Image Card / Graphic Showcase -->
+                       
+                        <div class="relative h-64 w-full bg-zinc-900 border border-brand-border rounded overflow-hidden">
+                            <span class="absolute top-3 right-3 bg-brand-yellow text-black text-[10px] font-chakra font-bold px-2 py-0.5 rounded z-10">IR FLASH CURE</span>
+                            <img src="images/infrared-flash-cure.jpg" alt="Infrared Flash Dryer" class="w-full h-full object-cover" />
+                        </div>
+
+                        <div>
+                            <h3 class="font-chakra font-black text-2xl text-white">INFRARED FLASH CURE UNIT</h3>
+                            <p class="text-xs font-chakra text-zinc-400 mt-1">Intermediate Ink Gelling &amp; Underbase Flash Dryer</p>
+                        </div>
+
+                        <p class="text-xs text-zinc-300 leading-relaxed">
+                            High-wattage radiant infrared heating element used between screen print passes to quickly gel white underbases for opaque vibrancy on dark black garments.
+                        </p>
+
+                        <!-- Tech Specs List -->
+                        <div class="bg-zinc-900/80 p-3 rounded border border-brand-border/60 space-y-2 text-[11px] font-chakra">
+                            <div class="flex justify-between border-b border-zinc-800 pb-1">
+                                <span class="text-zinc-400">Heating Area:</span>
+                                <span class="font-bold text-white">18" x 18" Full Coverage</span>
+                            </div>
+                            <div class="flex justify-between border-b border-zinc-800 pb-1">
+                                <span class="text-zinc-400">Flash Speed:</span>
+                                <span class="font-bold text-brand-yellow">4 - 6 Seconds Per Pass</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-zinc-400">Function:</span>
+                                <span class="font-bold text-white">Wet-on-Dry Ink Stacking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 border-t border-brand-border/60">
+                        <span class="text-[10px] font-chakra text-zinc-400 block uppercase mb-1">Primary Applications</span>
+                        <div class="flex flex-wrap gap-1 text-[10px] font-chakra">
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">Dark Shirt Underbase</span>
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">Vibrant White Ink</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Equipment 5: Digital DTF Printing System -->
+                <div class="bg-brand-card border-2 border-brand-border hover:border-brand-yellow clip-corner p-6 transition duration-300 space-y-5 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-brand-border pb-3">
+                            <span class="text-[10px] font-chakra text-brand-yellow tracking-widest uppercase bg-zinc-900 border border-brand-yellow/30 px-2 py-0.5 rounded">GEAR SPEC // 05</span>
+                            <span class="text-xs font-chakra text-emerald-400 font-bold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> OPERATIONAL</span>
+                        </div>
+
+                        <!-- Visual Image Card / Graphic Showcase -->
+                        <div class="relative h-64 w-full bg-zinc-900 border border-brand-border rounded overflow-hidden">
+                            <span class="absolute top-3 right-3 bg-brand-yellow text-black text-[10px] font-chakra font-bold px-2 py-0.5 rounded z-10">DTF ROLL ENGINE</span>
+                            <img src="images/digital-dtf-printer.jpg" alt="Digital DTF Printer Setup" class="w-full h-full object-cover" />
+                        </div>
+
+                        <div>
+                            <h3 class="font-chakra font-black text-2xl text-white">DIGITAL DTF PRINTER SETUP</h3>
+                            <p class="text-xs font-chakra text-zinc-400 mt-1">Direct-To-Film High DPI Textile Transfer Engine</p>
+                        </div>
+
+                        <p class="text-xs text-zinc-300 leading-relaxed">
+                            Precision inkjet DTF engine with automated white ink circulation. Capable of rendering 1440 DPI photographic details and complex gradients onto PET transfer films.
+                        </p>
+
+                        <!-- Tech Specs List -->
+                        <div class="bg-zinc-900/80 p-3 rounded border border-brand-border/60 space-y-2 text-[11px] font-chakra">
+                            <div class="flex justify-between border-b border-zinc-800 pb-1">
+                                <span class="text-zinc-400">Resolution:</span>
+                                <span class="font-bold text-white">1440 x 1440 DPI Ultra HD</span>
+                            </div>
+                            <div class="flex justify-between border-b border-zinc-800 pb-1">
+                                <span class="text-zinc-400">Ink System:</span>
+                                <span class="font-bold text-brand-yellow">CMYK + White Circulation</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-zinc-400">Adhesive:</span>
+                                <span class="font-bold text-white">Flexible TPU Powder Bond</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 border-t border-brand-border/60">
+                        <span class="text-[10px] font-chakra text-zinc-400 block uppercase mb-1">Primary Applications</span>
+                        <div class="flex flex-wrap gap-1 text-[10px] font-chakra">
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">Gradient Art</span>
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">No-Minimum Orders</span>
+                            <span class="bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">Complex Logos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Production Workflow Summary Card -->
+                <div class="bg-zinc-900 border-2 border-brand-yellow clip-corner p-6 space-y-4 flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block bg-brand-yellow text-black font-chakra font-black text-xs px-2.5 py-1 mb-3">
+                            QUALITY ASSURANCE
+                        </div>
+                        <h3 class="font-chakra font-black text-2xl text-white">THE LOCALTEES STANDARD</h3>
+                        <p class="text-xs text-zinc-300 mt-2 leading-relaxed">
+                            Every single order—from a single custom piece to a 500-shirt brand drop—passes through our multi-stage inspection: vector prep, registration check, temperature-monitored heat cure, and wash stress test.
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-brand-border">
+                        <button onclick="switchTab('quote')" class="w-full clip-btn bg-brand-yellow text-black font-chakra font-bold py-3 text-xs flex items-center justify-center gap-2 hover:bg-yellow-300 transition uppercase">
+                            <i class="fa-solid fa-shirt"></i> Start Order with This Setup
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ================= PAGE 5: SERVICES (`services.html` simulation) ================= -->
+        <div id="tab-services" class="tab-content hidden space-y-12">
+            <div class="border-b border-brand-border pb-4">
+                <h1 class="font-chakra text-3xl sm:text-4xl font-black text-white">OUR PRINTING SERVICES</h1>
+                <p class="text-zinc-400 text-sm">Industrial grade printing solutions tailored for clothing lines, organizations, and events.</p>
+            </div>
+
+            <!-- Detailed Service Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-brand-card border border-brand-border p-6 clip-corner space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-brand-yellow text-black flex items-center justify-center text-2xl font-bold">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-chakra font-black text-2xl text-white">HIGH-VOLUME SCREENPRINTING</h3>
+                            <span class="text-xs font-chakra text-brand-yellow">BEST FOR 20+ PIECES • MAXIMUM DURABILITY</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-zinc-300 leading-relaxed">
+                        Traditional silk screenprinting utilizing high-grade Plastisol, discharge, and water-based inks. Provides ultra-durable prints that withstand hundreds of standard washes without cracking or fading.
+                    </p>
+                    <ul class="text-xs text-zinc-400 space-y-2 font-chakra">
+                        <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i> Heavy ink opacity on dark garments</li>
+                        <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i> Specialty effects: Metallic, Puff 3D, High-Density</li>
+                        <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i> Cost-effective scale pricing for large orders</li>
+                    </ul>
+                </div>
+
+                <div class="bg-brand-card border border-brand-border p-6 clip-corner space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-brand-yellow text-black flex items-center justify-center text-2xl font-bold">
+                            <i class="fa-solid fa-print"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-chakra font-black text-2xl text-white">DIGITAL DTF (DIRECT TO FILM)</h3>
+                            <span class="text-xs font-chakra text-brand-yellow">NO MINIMUMS • FULL COLOR GRADIENTS</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-zinc-300 leading-relaxed">
+                        State-of-the-art Direct-to-Film digital transfer system allowing photorealistic graphics, smooth gradients, and intricate vector details without film screen setup costs.
+                    </p>
+                    <ul class="text-xs text-zinc-400 space-y-2 font-chakra">
+                        <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i> Full color printing with subtle shading &amp; photographs</li>
+                        <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i> Soft-hand flexible feel on cotton, poly &amp; blends</li>
+                        <li><i class="fa-solid fa-check text-brand-yellow mr-2"></i> Perfect for sample runs and small batch drops</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- COMPARISON MATRIX MATRIX TABLE -->
+            <div class="space-y-4">
+                <h3 class="font-chakra font-black text-2xl text-white">TECHNIQUE COMPARISON GUIDE</h3>
+                <div class="overflow-x-auto border border-brand-border rounded">
+                    <table class="w-full text-left font-chakra text-xs text-zinc-300">
+                        <thead class="bg-zinc-900 text-brand-yellow border-b border-brand-border uppercase">
+                            <tr>
+                                <th class="p-4">Feature</th>
+                                <th class="p-4">Screenprinting</th>
+                                <th class="p-4">Digital DTF</th>
+                                <th class="p-4">Full Sublimation</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-zinc-800 bg-brand-card">
+                            <tr>
+                                <td class="p-4 font-bold text-white">Ideal Quantity</td>
+                                <td class="p-4">Medium to Bulk (20 to 1,000+)</td>
+                                <td class="p-4">1 to 50+ pieces</td>
+                                <td class="p-4">10+ pieces</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold text-white">Color Capacity</td>
+                                <td class="p-4">Spot Colors (1 - 6 colors)</td>
+                                <td class="p-4">Unlimited CMYK / Gradients</td>
+                                <td class="p-4">Unlimited All-Over Colors</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold text-white">Fabric Compatibility</td>
+                                <td class="p-4">100% Cotton, Heavy Blends</td>
+                                <td class="p-4">Cotton, Polyester, Nylon, Canvas</td>
+                                <td class="p-4">100% Polyester / Dri-Fit</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold text-white">Wash Durability</td>
+                                <td class="p-4 text-emerald-400">Extreme (Years)</td>
+                                <td class="p-4 text-emerald-400">High (50+ washes)</td>
+                                <td class="p-4 text-emerald-400">Permanent (In-fabric)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- ================= PAGE 5: ABOUT THE PRINTER (`about.html` simulation) ================= -->
+        <div id="tab-about" class="tab-content hidden space-y-12">
+            
+            <div class="border-b border-brand-border pb-4">
+                <h1 class="font-chakra text-3xl sm:text-4xl font-black text-white">ABOUT LOCALTEES STUDIO</h1>
+                <p class="text-zinc-400 text-sm">Craftsmanship, precision pressing, and community roots in Makato, Philippines.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <h2 class="font-chakra text-3xl font-black text-brand-yellow">BUILT FOR LOCAL APPAREL CREATORS</h2>
+                    <p class="text-sm text-zinc-300 leading-relaxed">
+                        Founded with a mission to deliver top-tier, street-ready garment decoration without requiring massive corporate minimums. **Localtees** operates out of Makato, Philippines, serving local streetwear brands, motor clubs, school batch shirts, and corporate events across the region.
+                    </p>
+                    <p class="text-sm text-zinc-300 leading-relaxed">
+                        We combine industrial precision—from screen tensioning and ink curing to digital DTF calibration—with an obsession for crisp lines, vibrant colors, and long-lasting quality.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="border border-brand-border bg-brand-card p-4 clip-corner-sm">
+                            <i class="fa-solid fa-crosshairs text-brand-yellow text-xl mb-2"></i>
+                            <h4 class="font-chakra font-bold text-white text-sm">VECTOR PRECISION</h4>
+                            <p class="text-xs text-zinc-400">Sharp screen alignment and high DPI artwork reproduction.</p>
+                        </div>
+                        <div class="border border-brand-border bg-brand-card p-4 clip-corner-sm">
+                            <i class="fa-solid fa-shield-halved text-brand-yellow text-xl mb-2"></i>
+                            <h4 class="font-chakra font-bold text-white text-sm">CURED FOR LONGEVITY</h4>
+                            <p class="text-xs text-zinc-400">Heat cured to prevent cracking, peeling, or fading over time.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="bg-brand-card border-2 border-brand-yellow p-6 clip-corner space-y-4">
+                        <div class="h-64 bg-zinc-900 flex items-center justify-center overflow-hidden relative">
+                            <img src="https://placehold.co/700x450/161614/ffe600?text=LOCALTEES+STUDIO+WORKSHOP" alt="Studio Workshop" class="w-full h-full object-cover">
+                            <div class="absolute bottom-3 left-3 bg-black/80 px-3 py-1 text-xs font-chakra text-brand-yellow border border-brand-yellow/50">
+                                STUDIO WORKSHOP • MAKATO, AKLAN
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="font-chakra font-bold text-xl text-white">STUDIO CONTACT DETAILS</h3>
+                            <div class="text-xs font-chakra space-y-1 text-zinc-300">
+                                <p><i class="fa-solid fa-location-dot text-brand-yellow w-5"></i> Makato, Philippines, 5611</p>
+                                <p><i class="fa-solid fa-phone text-brand-yellow w-5"></i> 0920 501 7777</p>
+                                <p><i class="fa-solid fa-envelope text-brand-yellow w-5"></i> fher_factor@rocketmail.com</p>
+                                <p><i class="fa-brands fa-facebook-messenger text-brand-yellow w-5"></i> m.me/Localtees</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- LIGHTBOX MODAL FOR GALLERY PREVIEW -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+        <div class="relative max-w-3xl w-full bg-brand-card border-2 border-brand-yellow p-4 clip-corner space-y-4">
+            <button onclick="closeLightbox()" class="absolute top-3 right-3 text-brand-yellow text-2xl font-bold hover:text-white">&times;</button>
+            <img id="lightbox-img" src="" alt="Print Showcase" class="w-full h-auto max-h-[70vh] object-contain mx-auto bg-black">
+            <h3 id="lightbox-title" class="font-chakra font-bold text-lg text-brand-yellow text-center"></h3>
+        </div>
+    </div>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="bg-brand-black border-t-2 border-brand-border mt-16 font-chakra">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <div class="space-y-3">
+                    <span class="font-black text-2xl tracking-tighter text-white block">
+                        LOCAL<span class="text-brand-yellow">TEES</span>
+                    </span>
+                    <p class="text-xs text-zinc-400 font-sans">
+                        Digital &amp; screenprinting studio providing top quality printing and competitive pricing based in Makato, Philippines.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-3 text-brand-yellow">QUICK NAVIGATION</h4>
+                    <ul class="space-y-2 text-xs text-zinc-400">
+                        <li><button onclick="switchTab('home')" class="hover:text-white">Home</button></li>
+                        <li><button onclick="switchTab('quote')" class="hover:text-white">Interactive Quote Builder</button></li>
+                        <li><button onclick="switchTab('gallery')" class="hover:text-white">Showcase Gallery</button></li>
+                        <li><button onclick="switchTab('services')" class="hover:text-white">Services Breakdown</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-3 text-brand-yellow">STUDIO LOCATION</h4>
+                    <p class="text-xs text-zinc-400">Makato, Philippines, 5611</p>
+                    <p class="text-xs text-zinc-400 mt-2">Open for customized orders &amp; brand consultations.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-sm mb-3 text-brand-yellow">CONNECT DIRECTLY</h4>
+                    <div class="flex flex-col space-y-2 text-xs">
+                        <a href="https://m.me/Localtees" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white py-2 px-3 rounded text-center font-bold flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-facebook-messenger"></i> Facebook Messenger
+                        </a>
+                        <a href="mailto:fher_factor@rocketmail.com" class="bg-zinc-800 hover:bg-zinc-700 text-white py-2 px-3 rounded text-center font-bold flex items-center justify-center gap-2 border border-zinc-700">
+                            <i class="fa-solid fa-envelope"></i> Email Support
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-zinc-800 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-zinc-500">
+                <p>&copy; 2026 LOCALTEES Studio. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Design &amp; Print Studio • Makato, Aklan</p>
+            </div>
+        </div>
+        <div class="hazard-bar h-2 w-full"></div>
+    </footer>
+
+
+    <!-- JAVASCRIPT APP LOGIC -->
+    <script>
+        // State Management for Quote Estimator
+        let currentGarmentPrice = 180;
+        let currentGarmentName = "Standard Tee";
+
+        // Navigation Tab Switcher (SPA Simulation)
+        function switchTab(tabId) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            
+            // Show selected tab
+            const activeTab = document.getElementById('tab-' + tabId);
+            if(activeTab) activeTab.classList.remove('hidden');
+
+            // Update Nav Styling
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('border-brand-yellow', 'text-brand-yellow');
+                btn.classList.add('border-transparent', 'text-zinc-300');
+            });
+
+            const activeBtn = document.getElementById('nav-' + tabId);
+            if(activeBtn) {
+                activeBtn.classList.remove('border-transparent', 'text-zinc-300');
+                activeBtn.classList.add('border-brand-yellow', 'text-brand-yellow');
+            }
+
+            // Close mobile menu if open
+            document.getElementById('mobile-menu').classList.add('hidden');
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Quote Estimator Calculations
+        function selectGarment(type, basePrice, btnElement) {
+            currentGarmentPrice = basePrice;
+            
+            if(type === 'tshirt') currentGarmentName = "Standard Tee";
+            if(type === 'oversized') currentGarmentName = "Oversized Heavyweight Tee";
+            if(type === 'hoodie') currentGarmentName = "Heavy Hoodie";
+            if(type === 'jersey') currentGarmentName = "Sublimation Jersey";
+
+            // Update UI buttons styling
+            document.querySelectorAll('.garment-btn').forEach(btn => {
+                btn.classList.remove('border-2', 'border-brand-yellow');
+                btn.classList.add('border', 'border-brand-border');
+            });
+            btnElement.classList.remove('border-brand-border');
+            btnElement.classList.add('border-2', 'border-brand-yellow');
+
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            const qty = parseInt(document.getElementById('order-qty').value) || 1;
+            const printMethod = document.getElementById('print-method').value;
+
+            // Calculate print location additions
+            let locationCost = 0;
+            let locationCount = 0;
+            if(document.getElementById('loc-front').checked) { locationCost += 40; locationCount++; }
+            if(document.getElementById('loc-back').checked) { locationCost += 50; locationCount++; }
+            if(document.getElementById('loc-chest').checked) { locationCost += 25; locationCount++; }
+            if(document.getElementById('loc-sleeve').checked) { locationCost += 25; locationCount++; }
+
+            // Method modifier
+            let methodMultiplier = 1.0;
+            if(printMethod === 'Digital DTF') methodMultiplier = 1.15;
+            if(printMethod === 'Sublimation') methodMultiplier = 1.25;
+
+            let unitCost = (currentGarmentPrice + locationCost) * methodMultiplier;
+
+            // Discount thresholds
+            let discountPercent = 0;
+            const badge = document.getElementById('discount-badge');
+            
+            if(qty >= 15 && qty <= 50) {
+                discountPercent = 0.10;
+                badge.innerText = "10% BULK DISCOUNT";
+                badge.className = "text-[10px] font-chakra bg-amber-950 text-amber-400 border border-amber-700 px-2 py-0.5 rounded";
+            } else if(qty >= 51 && qty <= 100) {
+                discountPercent = 0.20;
+                badge.innerText = "20% WHOLESALE DISCOUNT";
+                badge.className = "text-[10px] font-chakra bg-emerald-950 text-emerald-400 border border-emerald-700 px-2 py-0.5 rounded";
+            } else if(qty > 100) {
+                discountPercent = 0.30;
+                badge.innerText = "30% VIP VOLUME DISCOUNT";
+                badge.className = "text-[10px] font-chakra bg-brand-yellow text-black font-bold px-2 py-0.5 rounded";
+            } else {
+                badge.innerText = "NO DISCOUNT";
+                badge.className = "text-[10px] font-chakra bg-zinc-800 text-zinc-400 border border-zinc-700 px-2 py-0.5 rounded";
+            }
+
+            unitCost = unitCost * (1 - discountPercent);
+            const total = unitCost * qty;
+
+            // Render Summary
+            document.getElementById('summary-garment').innerText = currentGarmentName;
+            document.getElementById('summary-method').innerText = printMethod;
+            document.getElementById('summary-positions').innerText = locationCount + " Location(s)";
+            document.getElementById('summary-unit').innerText = "₱" + unitCost.toFixed(2) + " / pc";
+            document.getElementById('summary-qty').innerText = qty + " pcs";
+            document.getElementById('summary-total').innerText = "₱" + Math.round(total).toLocaleString();
+        }
+
+        // File Drag and Drop Simulation
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('border-brand-yellow', 'bg-zinc-800');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('border-brand-yellow', 'bg-zinc-800');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('border-brand-yellow', 'bg-zinc-800');
+            if (e.dataTransfer.files.length) {
+                fileInput.files = e.dataTransfer.files;
+                handleFileSelect(fileInput);
+            }
+        });
+
+        function handleFileSelect(input) {
+            if (input.files && input.files[0]) {
+                document.getElementById('file-name').innerText = "Attached: " + input.files[0].name;
+            }
+        }
+
+        // Send Form Details via Messenger or Email
+        function generateQuoteText() {
+            const garment = currentGarmentName;
+            const color = document.getElementById('shirt-color').value;
+            const method = document.getElementById('print-method').value;
+            const qty = document.getElementById('order-qty').value;
+            const total = document.getElementById('summary-total').innerText;
+            const notes = document.getElementById('quote-notes').value || "None";
+
+            return `Hi Localtees! I would like to get a quote request:\n- Garment: ${garment} (${color})\n- Print Method: ${method}\n- Quantity: ${qty} pcs\n- Estimated Total: ${total}\n- Notes: ${notes}`;
+        }
+
+        function sendQuoteMessenger() {
+            const text = encodeURIComponent(generateQuoteText());
+            window.open(`https://m.me/Localtees?text=${text}`, '_blank');
+        }
+
+        function sendQuoteEmail() {
+            const text = encodeURIComponent(generateQuoteText());
+            window.location.href = `mailto:fher_factor@rocketmail.com?subject=Localtees Quote Request&body=${text}`;
+        }
+
+        // Gallery Filter Logic
+        function filterGallery(category, btn) {
+            document.querySelectorAll('.gallery-filter-btn').forEach(b => {
+                b.classList.remove('bg-brand-yellow', 'text-black');
+                b.classList.add('bg-zinc-900', 'text-zinc-300');
+            });
+            btn.classList.remove('bg-zinc-900', 'text-zinc-300');
+            btn.classList.add('bg-brand-yellow', 'text-black');
+
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // Lightbox Modal Functions
+        function openLightbox(imgSrc, title) {
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox-title').innerText = title;
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.getElementById('lightbox').classList.add('flex');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.getElementById('lightbox').classList.remove('flex');
+        }
+
+        // Initialize calculations on load
+        window.onload = function() {
+            calculateTotal();
+        }
+    </script>
+</body>
+</html>
